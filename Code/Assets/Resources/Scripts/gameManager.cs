@@ -16,7 +16,11 @@ public class gameManager : MonoBehaviour
         cartas = GameObject.FindGameObjectsWithTag("Cards");
         arrumarCartas();
     }
-   
+
+
+    /// <summary>
+    /// Método para sortear cartas aleatórias para serem instanciadas
+    /// </summary>
     void arrumarCartas()
     {
         while (cartasInstanciadas <= 18)
