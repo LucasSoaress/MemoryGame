@@ -8,20 +8,22 @@ public class gameManager : MonoBehaviour
     private static GameObject[] cartas;
     public  Sprite[] cartasFrente;
     private int cartasInstanciadas;
-    public static List<int> myList = new List<int>();
+    public  List<int> myList = new List<int>();
 
-    void Awake()
+    void Start()
     {
+        Debug.Log("teste");
         cartasInstanciadas = 0;
         cartas = GameObject.FindGameObjectsWithTag("Cards");
         arrumarCartas();
+        myList.Clear();
     }
 
 
     /// <summary>
     /// Método para sortear cartas aleatórias para serem instanciadas
     /// </summary>
-    void arrumarCartas()
+    public void arrumarCartas()
     {
         while (cartasInstanciadas <= 18)
         {
